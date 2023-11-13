@@ -1,0 +1,15 @@
+<section class="product">
+    <span class="link" routerLink=''>Product</span> 
+    <span> > Product Details > {{ id }}</span>  
+    <button class="backBtn" (click)="goBack()">Back</button>
+    <div class="product-card one">
+          <div class="product-image">
+            <img [src]="product?.image"/>
+          </div>
+          <div class="product-details">
+            <h2>{{product?.title}}</h2>
+            <h5>{{product?.description}}</h5>
+            <span>{{product?.price |currency}}</span>
+          </div>
+        </div>
+</section>

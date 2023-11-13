@@ -1,0 +1,5 @@
+<section class="products">
+    <div routerLink="/products/{{product.id}}"  class="product-card" *ngFor="let product of filteredProds" >
+      <app-product [product]="product"></app-product>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+<nav class="product-filter">
+    <h1>Products:</h1>
+    <div class="sort">
+      <div class="collection-sort">
+        <label>Filter by:</label>
+        <select (change)="onSelect()" [(ngModel)]="selectCat">
+          <option value="" selected>select category</option>
+          <option [value]="category" *ngFor="let category of categories">{{category}}</option>
+        </select>
+      </div>
+
+      <div class="collection-sort">
+        <label>Sort by:</label>
+        <select (change)="sortBy()" [(ngModel)]="selectSort">
+          <option *ngFor="let sort of sortList ; index as i" [value]="i">{{sort.name}}</option>
+        </select>
+      </div>
+    </div>
+  </nav>
